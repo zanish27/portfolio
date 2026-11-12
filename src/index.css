@@ -1,0 +1,114 @@
+@import "tailwindcss"; 
+
+body {
+  background: #08090B;
+  color: #F5F3EF;
+  font-family: 'Lora', Georgia, serif;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.display {
+  font-family: 'Anton', Impact, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.outline-text {
+  -webkit-text-stroke: 2px #d6d3d1;
+  color: transparent;
+}
+
+* {
+  cursor: none;
+}
+
+/* sticky or scroll the skills part  */
+/* @keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: reveal-up linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 50%;
+  }
+} */
+
+
+ @keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease-out both;
+}
+
+
+
+@keyframes borderGlow {
+  0%, 100% {
+    opacity: 0.75;
+    box-shadow: 0 0 3px rgba(255, 201, 0, 1);
+  }
+  50% {
+    opacity: 0.9;
+    box-shadow: 0 0 7px rgba(255, 201, 0, 1);
+  }
+}
+
+.border-blink {
+  animation: borderGlow 2s ease-in-out infinite;
+}
+
+
+
+
+
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.card {
+  opacity: 0;
+}
+
+.card.show {
+  animation: slide 1s ease-out forwards;
+}
+
+
+
+
+@keyframes textUp {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.text-animate {
+  animation: textUp 1s ease-out forwards;
+}
